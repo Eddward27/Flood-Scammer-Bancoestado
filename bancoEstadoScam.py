@@ -6,7 +6,19 @@ import sys
 url = 'http://evmade.com/docs/www.bancoestado.cl/eBankingBech/home/home.htm'
 print ('Detesto las estafas asi que hice este pequeño programa que puede enviar ruts con claves falsas a una url que me llegó por correo\nUrl: ' + url + '\nCuidado con los correos que les llegan, los bancos jamás envían enlaces por correos y siempre verifiquen que la URL sea de confianza\nPuedes iniciar el programa con un numero como argumento para enviar \'x\' cantidad de información falsa a este estafador en particular\nEj: python bancoEstadoScam.py 1000\n\n')
 
+if (sys.argv[1]):
+    if (sys.argv[1].isdigit()):
+        loopsQ = int(sys.argv[1])
+    else:
+        print ('Ingresa un número positivo como argumento')
+        quit()
+else:
+    print ('Ingresa un número como argumento')
+    quit()
 loopsQ = int(sys.argv[1])
+if (loopsQ < 1):
+    print ('Ingresa un número mayor que 1')
+    quit()
 random.seed = (os.urandom(1024))
 
 def digito_verificador(rut):
@@ -29,10 +41,10 @@ def rut_random():
 
 def clave_random():
     clave = 0
-    clave = random.randint(1, 10) * 1000
-    clave = clave + random.randint(0, 10) * 100
-    clave = clave + random.randint(0, 10) * 10
-    clave = clave + random.randint(0, 10)
+    clave = random.randint(1, 9) * 1000
+    clave = clave + random.randint(0, 9) * 100
+    clave = clave + random.randint(0, 9) * 10
+    clave = clave + random.randint(0, 9)
     return clave
 
 print ('Cantidad de datos a enviar: ' + str(loopsQ))
