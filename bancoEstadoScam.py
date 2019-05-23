@@ -35,6 +35,8 @@ def clave_random():
     clave = clave + random.randint(0, 10)
     return clave
 
+print ('Cantidad de datos a enviar: ' + str(loopsQ))
+
 for i in range(loopsQ):
     rut = rut_random()
     clave = clave_random()
