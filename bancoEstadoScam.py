@@ -57,4 +57,4 @@ for i in range(loopsQ):
         'j_username': rut,
         'j_password': clave
     })
-    print ('Enviando rut: ' + rut + ' y contraseña: ' + str(clave))
+    print (str(i) + ' - Enviando rut: ' + rut + ' y contraseña: ' + str(clave))
