@@ -23,7 +23,7 @@ if (loopsQ < 1):
 random.seed = (os.urandom(1024))
 
 def digito_verificador(rut):    #Digito Verificador real -> value = 11 - sum([ int(a)*int(b)  for a,b in zip(str(rut).zfill(8), '32765432')])%11
-    value = 1 + 11 - sum([ int(a)*int(b)  for a,b in zip(str(rut).zfill(8), '32765432')])%11    #Este es falso
+    value = random.randint(1, 9) + 11 - sum([ int(a)*int(b)  for a,b in zip(str(rut).zfill(8), '32765432')])%11    #Este es falso
     return {10: 'K', 11: '0'}.get(value, str(value))
 
 def rut_random():
@@ -60,4 +60,7 @@ for i in range(loopsQ):
     })
     print (str(i + 1) + ' - Enviando rut: ' + rut + ' y contraseña: ' + str(clave))
 
-print (sys.argv[1] + ' datos enviados correctamente!')
+if (int(sys.argv[1]) > 1):
+    print (sys.argv[1] + ' datos enviados correctamente!')
+else:
+    print ('1 dato enviado correctamente!')
