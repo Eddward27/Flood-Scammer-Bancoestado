@@ -23,7 +23,7 @@ if (loopsQ < 1):
 random.seed = (os.urandom(1024))
 
 def digito_verificador(rut):    #Digito Verificador real -> value = 11 - sum([ int(a)*int(b)  for a,b in zip(str(rut).zfill(8), '32765432')])%11
-    value = random.randint(1, 9) + 11 - sum([ int(a)*int(b)  for a,b in zip(str(rut).zfill(8), '32765432')])%11    #Este es falso
+    value = 11 - sum([ int(a)*int(b) + (random.randint(1, 9))  for a,b in zip(str(rut).zfill(8), '32765432')])%11    #Este es falso
     return {10: 'K', 11: '0'}.get(value, str(value))
 
 def rut_random():
