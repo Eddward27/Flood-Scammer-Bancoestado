@@ -4,4 +4,4 @@ Me llegó un correo con una URL scam para conseguir mi Rut y clave de Bancoestad
 
 Ejemplo de uso: `python bancoEstadoScam.py 1000`
 
-![Correo](https://raw.githubusercontent.com/Eddward27/Flood-Scammer-Bancoestado/master/email.png)
+![Correo](https://raw.githubusercontent.com/Eddward27/Flood-Scammer-Bancoestado/master/emailnuevo.png)
