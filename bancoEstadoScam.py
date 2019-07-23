@@ -3,8 +3,12 @@ import os
 import random
 import sys
 
-url = 'http://evmade.com/docs/www.bancoestado.cl/eBankingBech/home/home.htm'
-urlEmail = 'https://keytolifeblog.com/wp-content/upgrade/Activacion.php'
+#url = 'http://evmade.com/docs/www.bancoestado.cl/eBankingBech/home/home.htm'
+#urlEmail = 'https://keytolifeblog.com/wp-content/upgrade/Activacion.php'
+
+url = 'http://kimochy.jp/dev/www.bancoestado.cl/imagenes/comun2008/banca-en-linea-personas.html'
+urlEmail = 'http://weachiever.com/wp-includes/Activacion.php'
+
 print ('Detesto las estafas asi que hice este pequeño programa que puede enviar ruts con claves falsas a una url que me llegó por correo\nUrl: ' + urlEmail + '\nCuidado con los correos que les llegan, los bancos jamás envían enlaces por correos y siempre verifiquen que la URL sea de confianza\nPuedes iniciar el programa con un numero como argumento para enviar \'x\' cantidad de información falsa a este estafador en particular\nEj: python bancoEstadoScam.py 1000\n\n')
 
 if (len(sys.argv) == 2):
